@@ -301,7 +301,7 @@
               threshold: 0.1
             });
           }, false);
-          request.open('GET', '/index.json');
+          request.open('GET', '/30-day-map-challenge-2022/index.json');
           // if Fuse has not been loaded, load the latest version from CDN
           if (!window.Fuse) {
             var script = d.createElement('script');
