@@ -22,7 +22,8 @@
       </li>
       {{ range .Site.Menus.header }}
       <li{{ with .Pre }} class="{{ . }}"{{ end }}{{ with .Identifier }} id="{{ . }}"{{ end }}>
-        <a href="{{ .URL | relURL }}"{{ if eq .URL $.RelPermalink }} class="active"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
+        {{ $url := .URL | relURL }}
+        <a href="{{ print $url }}" {{ if eq .URL $.RelPermalink }} class="active"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
       </li>
       {{ end }}
     </ul>
